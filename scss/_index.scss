@@ -1,0 +1,94 @@
+/*home*/
+.textoNosotros {
+  font-size: 30px;
+  text-align: justify;
+}
+/*termina home*/
+/*Empieza bodyHome*/
+
+.mainHome{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.titulo{
+  font-size: 60px;
+  font-style: italic;
+  color: $color-claro;
+  text-wrap: balance;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: $color-oscuro;
+  text-align: center;
+}
+.contenedor-carousel{
+  width: 90%;
+  border-radius: 15px;
+}
+.contenedor-bienvenida{
+
+}
+.contenedor-texto{
+  width: 100%;
+}
+.img-index1, .img-index2, .img-index3{
+  width: 50%;
+  height: 60%;
+  margin: 10px;
+  border-radius: 3px;
+}
+.img-index1{
+  float: right;
+}
+.img-index2{
+  float: left;
+}
+.img-index3{
+  float: right;
+}
+.texto-bienvenida{
+  font-size: 47px;
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: $color-oscuro;
+  text-align: center;
+}
+.img-index-mobile{
+  display: none;
+}
+@media screen and (max-width: 500px){
+  .img-index1, .img-index2, .img-index3{
+  display: none;
+}
+.texto-bienvenida{
+  font-size: 20px;
+  bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.img-index-mobile{
+  display: block;
+  width: 90%;
+}
+}
+@media screen and (min-width: 501px) and (max-width: 1200px) {
+  .texto-bienvenida{
+    font-size: 30px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-index-mobile{
+    display: block;
+    width: 90%;
+  }
+    .img-index1, .img-index2, .img-index3{
+    display: none;
+  }
+}
+
+/*Termina body*/
+

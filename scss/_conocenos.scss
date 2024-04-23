@@ -1,0 +1,45 @@
+/*conocenos*/
+.mainConocenos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.divConocenos{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: $color-medio;
+  height: 90%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+}
+
+@media screen and (max-width: 320px){
+  .divConocenos{
+    width: 95%;
+  }
+  }
+@media screen and (min-width: 321px) and (max-width: 810px){
+    .divConocenos{
+      width: 85%;
+    }
+  }
+.imgFranco{
+  width: 50%;
+  border-radius: 5%
+  
+}
+.divAside{
+  align-self: center;
+  margin-right: 3%;
+  margin-left: 1%;
+  border-radius: 5px;
+}
+.mapa{
+  border-radius: 5%;
+}
+/*conocenos termina*/
