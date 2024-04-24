@@ -16,22 +16,14 @@
   flex-direction: column;
   align-items: center;
   border-radius: 5%;
-}
-
-@media screen and (max-width: 320px){
-  .divConocenos{
-    width: 95%;
+  .imgFranco{
+    width: 50%;
+    border-radius: 5%
   }
+  .textoNosotros{
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: $color-oscuro;
   }
-@media screen and (min-width: 321px) and (max-width: 810px){
-    .divConocenos{
-      width: 85%;
-    }
-  }
-.imgFranco{
-  width: 50%;
-  border-radius: 5%
-  
 }
 .divAside{
   align-self: center;
@@ -40,6 +32,56 @@
   border-radius: 5px;
 }
 .mapa{
+  display: none;
   border-radius: 5%;
 }
+@media screen and (max-width: 320px){
+  .divConocenos{
+    width: 95%;
+    .textoNosotros{
+      font-size: 20px;
+    }
+  }
+  .mapa{
+    display: none;
+  }
+  .mapa-mobile{
+    display: block;
+    border-radius: 2px;
+  }
+  }
+@media screen and (min-width: 321px) and (max-width: 810px){
+
+  .divConocenos{
+      width: 85%;
+      .textoNosotros{
+        font-size: 23px;
+      }
+    }
+    .mapa-mobile{
+      display: block;
+      border-radius: 2px;
+    }
+  }
+  @media screen and (min-width: 811px) and (max-width: 1373px) {
+    .divConocenos{
+      width: 90%;
+      .imgFranco{
+        width: 30%;
+      }
+    }
+    .textoNosotros{
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $color-oscuro;
+    }
+  }
+  @media screen and (min-width: 811px){
+    .mapa-mobile{
+      display: none;
+    }
+    .mapa{
+      display: block;
+    }
+  }
+
 /*conocenos termina*/

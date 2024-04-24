@@ -17,7 +17,7 @@ body {
   position: sticky;
   top: 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: end;
   justify-content: space-between;
@@ -124,8 +124,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.titulo {
+.mainHome .titulo {
   font-size: 60px;
   font-style: italic;
   color: rgb(172, 102, 24);
@@ -143,34 +142,28 @@ body {
 .contenedor-texto {
   width: 100%;
 }
-
-.img-index1, .img-index2, .img-index3 {
-  width: 50%;
-  height: 60%;
-  margin: 10px;
-  border-radius: 3px;
-}
-
-.img-index1 {
-  float: right;
-}
-
-.img-index2 {
-  float: left;
-}
-
-.img-index3 {
-  float: right;
-}
-
-.texto-bienvenida {
+.contenedor-texto .texto-bienvenida {
   font-size: 47px;
   -webkit-text-stroke: 1px;
   -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
   text-align: center;
 }
-
-.img-index-mobile {
+.contenedor-texto .img-index1, .contenedor-texto .img-index2, .contenedor-texto .img-index3 {
+  width: 50%;
+  height: 60%;
+  margin: 10px;
+  border-radius: 3px;
+}
+.contenedor-texto .img-index1 {
+  float: right;
+}
+.contenedor-texto .img-index2 {
+  float: left;
+}
+.contenedor-texto .img-index3 {
+  float: right;
+}
+.contenedor-texto .img-index-mobile {
   display: none;
 }
 
@@ -240,6 +233,23 @@ body {
   justify-items: center;
   transition: width 1s;
 }
+.plato .descripcion-plato {
+  padding: 2%;
+  color: rgb(172, 102, 24);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+  text-align: center;
+  display: none;
+  transition: width 1s;
+}
+.plato .imgPlato {
+  border-radius: 10px;
+  width: 90%;
+  height: 90%;
+  margin: 5%;
+  margin-bottom: 0%;
+}
 
 @media screen and (min-width: 800px) {
   .plato:hover {
@@ -255,17 +265,6 @@ body {
     padding-bottom: 5px;
   }
 }
-.descripcion-plato {
-  padding: 2%;
-  color: rgb(172, 102, 24);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-  text-align: center;
-  display: none;
-  transition: width 1s;
-}
-
 @media screen and (min-width: 381px) and (max-width: 800px) {
   .plato {
     width: 100%;
@@ -320,14 +319,6 @@ body {
     margin: 5px 0px 5px 0px;
   }
 }
-.imgPlato {
-  border-radius: 10px;
-  width: 90%;
-  height: 90%;
-  margin: 5%;
-  margin-bottom: 0%;
-}
-
 .listaPostres {
   background-color: rgba(216, 137, 63, 0.295);
   border-radius: 15px;
@@ -338,14 +329,7 @@ body {
   width: 35%;
   margin: 1%;
 }
-
-@media screen and (max-width: 380px) {
-  .listaPostres {
-    width: 80%;
-    margin: 5px;
-  }
-}
-.platoPostre {
+.listaPostres .platoPostre {
   color: rgb(172, 102, 24);
   align-self: center;
   margin: 2%;
@@ -354,6 +338,12 @@ body {
   -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
 }
 
+@media screen and (max-width: 380px) {
+  .listaPostres {
+    width: 80%;
+    margin: 5px;
+  }
+}
 p {
   padding: 2%;
   color: rgb(172, 102, 24);
@@ -384,20 +374,13 @@ p {
   align-items: center;
   border-radius: 5%;
 }
-
-@media screen and (max-width: 320px) {
-  .divConocenos {
-    width: 95%;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 810px) {
-  .divConocenos {
-    width: 85%;
-  }
-}
-.imgFranco {
+.divConocenos .imgFranco {
   width: 50%;
   border-radius: 5%;
+}
+.divConocenos .textoNosotros {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
 }
 
 .divAside {
@@ -408,32 +391,159 @@ p {
 }
 
 .mapa {
+  display: none;
   border-radius: 5%;
 }
 
+@media screen and (max-width: 320px) {
+  .divConocenos {
+    width: 95%;
+  }
+  .divConocenos .textoNosotros {
+    font-size: 20px;
+  }
+  .mapa {
+    display: none;
+  }
+  .mapa-mobile {
+    display: block;
+    border-radius: 2px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 810px) {
+  .divConocenos {
+    width: 85%;
+  }
+  .divConocenos .textoNosotros {
+    font-size: 23px;
+  }
+  .mapa-mobile {
+    display: block;
+    border-radius: 2px;
+  }
+}
+@media screen and (min-width: 811px) and (max-width: 1373px) {
+  .divConocenos {
+    width: 90%;
+  }
+  .divConocenos .imgFranco {
+    width: 30%;
+  }
+  .textoNosotros {
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  }
+}
+@media screen and (min-width: 811px) {
+  .mapa-mobile {
+    display: none;
+  }
+  .mapa {
+    display: block;
+  }
+}
 /*conocenos termina*/
 /*contacto*/
-.main-contacto {
+.body-contacto {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.body-contacto .main-contacto {
   display: flex;
   flex-direction: row;
   gap: 5%;
   align-items: center;
   flex-wrap: wrap;
 }
-
-.div-aside {
+.body-contacto .main-contacto .contenedor-formulario {
+  position: relative;
+  border-radius: 5px;
+  margin: 80px auto;
+  width: 300px;
+  height: 550px;
+  background-color: rgba(216, 137, 63, 0.295);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.body-contacto .main-contacto .contenedor-formulario .tituloReserva {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  color: rgba(245, 177, 68, 0.527);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .item-formulario {
+  margin: 7px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-label {
+  color: rgba(245, 177, 68, 0.527);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-input {
+  background-color: transparent;
+  color: rgba(240, 248, 255, 0.253);
+  border-radius: 5px;
+  border-color: black;
+  padding: 5px;
+  width: 100%;
+  border: groove 1px;
+  border-color: rgb(172, 102, 24);
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-input::-moz-placeholder {
+  color: rgba(245, 177, 68, 0.527);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+  text-align: center;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-input::placeholder {
+  color: rgba(245, 177, 68, 0.527);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+  text-align: center;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-boton {
+  width: 150px;
+  align-self: center;
+  background-color: rgba(216, 137, 63, 0.295);
+  color: rgba(245, 177, 68, 0.527);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  font-size: 20px;
+  transition: 1s;
+}
+.body-contacto .main-contacto .contenedor-formulario .formularioReserva .formulario-boton:hover {
+  width: 250px;
+}
+.body-contacto .main-contacto .div-aside {
   background-color: rgba(216, 137, 63, 0.295);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-}
-
-.body-contacto {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .div-aside {
@@ -445,101 +555,20 @@ p {
   text-align: center;
 }
 
-.contenedor-formulario {
-  position: relative;
-  border-radius: 5px;
-  margin: 80px auto;
-  width: 300px;
-  height: 550px;
-  background-color: rgba(216, 137, 63, 0.295);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.formularioReserva {
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  right: 10%;
-  display: flex;
-  flex-direction: column;
-}
-
-.tituloReserva {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  justify-content: center;
-  color: rgba(245, 177, 68, 0.527);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-}
-
-.item-formulario {
-  margin: 7px;
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.formulario-label {
-  color: rgba(245, 177, 68, 0.527);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-}
-
-.formulario-input {
-  background-color: transparent;
-  color: rgba(240, 248, 255, 0.253);
-  border-radius: 5px;
-  border-color: black;
-  padding: 5px;
-  width: 100%;
-  border: groove 1px;
-  border-color: rgb(172, 102, 24);
-}
-
-.formulario-input::-moz-placeholder {
-  color: rgba(245, 177, 68, 0.527);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-  text-align: center;
-}
-
-.formulario-input::placeholder {
-  color: rgba(245, 177, 68, 0.527);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-  text-align: center;
-}
-
-.formulario-boton {
-  width: 150px;
-  align-self: center;
-  background-color: rgba(216, 137, 63, 0.295);
-  color: rgba(245, 177, 68, 0.527);
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
-  font-size: 20px;
-  transition: 1s;
-}
-.formulario-boton:hover {
-  width: 250px;
-}
-
 @media screen and (max-width: 600px) {
   .div-aside {
     width: 100%;
   }
+  .contenedor-ig {
+    width: 95%;
+  }
 }
+.contenedor-ig {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 5%;
+}
+
 .texto-wpp {
   color: rgba(245, 177, 68, 0.527);
 }

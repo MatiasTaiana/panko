@@ -1,34 +1,17 @@
 /*contacto*/
+
+
+.body-contacto{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 .main-contacto{
   display: flex;
   flex-direction: row;
   gap: 5%;
   align-items: center;
   flex-wrap: wrap;
-}
-.div-aside{
-  background-color: $color-medio;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-.body-contacto{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
- 
-}
-.div-aside{
-   height: 150px;
-   width: 35%;
-   margin: auto;
-   display: flex;
-   flex-wrap: wrap;
-   text-align: center;
-}
-.contenedor-formulario{
+  .contenedor-formulario{
   position: relative;
   border-radius: 5px;
   margin: 80px auto;
@@ -38,72 +21,105 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
-.formularioReserva{
-  position: absolute;
-  top: 5%;
-  left: 10%;
-  right: 10%;
-  display: flex;
-  flex-direction: column;
-}
-.tituloReserva{
-  margin: 0px;
-  padding:0px ;
-  display: flex;
-  justify-content: center;
-  color: $color-claro-medio;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: $color-oscuro;
-  font-size: 20px;
-}
-.item-formulario{
-  margin: 7px;
-  padding-left: 10%;
-  padding-right: 10%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.formulario-label{
-  color: $color-claro-medio;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: $color-oscuro;
-  font-size: 20px;
-}
-.formulario-input{
-  background-color: transparent;
-  color: rgba(240, 248, 255, 0.253);
-  border-radius: 5px;
-  border-color: black ;
-  padding: 5px;
-  width: 100%;
-  border: groove 1px;
-  border-color: $color-claro;
-}
-.formulario-input::placeholder{
-  color: $color-claro-medio;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: $color-oscuro;
-  font-size: 20px;
-  text-align: center;
-}
-.formulario-boton{
-  width: 150px;
-  align-self: center;
-  background-color: $color-medio;
-  color: $color-claro-medio;
-  -webkit-text-stroke: 1px;
-  -webkit-text-stroke-color: $color-oscuro;
-  font-size: 20px;
-  transition: 1s;
-  &:hover{
-    width: 250px;    
+    .tituloReserva{
+      margin: 0px;
+      padding:0px ;
+      display: flex;
+      justify-content: center;
+      color: $color-claro-medio;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $color-oscuro;
+      font-size: 20px;
+    }
+    .formularioReserva{
+      position: absolute;
+      top: 5%;
+      left: 10%;
+      right: 10%;
+      display: flex;
+      flex-direction: column;
+        .item-formulario{
+          margin: 7px;
+          padding-left: 10%;
+          padding-right: 10%;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        .formulario-label{
+          color: $color-claro-medio;
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color: $color-oscuro;
+          font-size: 20px;
+        }
+        .formulario-input{
+          background-color: transparent;
+          color: rgba(240, 248, 255, 0.253);
+          border-radius: 5px;
+          border-color: black ;
+          padding: 5px;
+          width: 100%;
+          border: groove 1px;
+          border-color: $color-claro;
+        }
+        .formulario-input::placeholder{
+          color: $color-claro-medio;
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color: $color-oscuro;
+          font-size: 20px;
+          text-align: center;
+        }
+        .formulario-boton{
+          width: 150px;
+          align-self: center;
+          background-color: $color-medio;
+          color: $color-claro-medio;
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color: $color-oscuro;
+          font-size: 20px;
+          transition: 1s;
+          &:hover{
+           width: 250px;    
+          }
+        }
+    }
+  }
+  .div-aside{
+    background-color: $color-medio;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
   }
 }
+}
+.div-aside{
+   height: 150px;
+   width: 35%;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   text-align: center;
+}
+
 @media screen and (max-width:600px){
-  .div-aside{width: 100%;}
+  .div-aside{
+    width: 100%;
+  }
+  .contenedor-ig{
+    width: 95%;
+  
+  }
+}
+.contenedor-ig{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 5%;
+}
+.eapps-instagram-feed-content{
+
 }
 .texto-wpp{
   color: $color-claro-medio;
