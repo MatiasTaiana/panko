@@ -27,7 +27,7 @@ body {
 .listNav .headerItem {
   display: inline;
   order: 1;
-  margin: 5px;
+  margin: 1px;
 }
 .listNav .headerItem a:link,
 .listNav .headerItem a:visited {
@@ -46,11 +46,6 @@ body {
   width: 50px;
 }
 
-@media screen and (max-width: 358px) {
-  .headerItem {
-    width: 20%;
-  }
-}
 /*Termina nav*/
 /*dropdown*/
 .botonMenu {
