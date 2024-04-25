@@ -46,6 +46,18 @@ body {
   width: 50px;
 }
 
+@media screen and (max-width: 326px) {
+  .listNav .headerItem a:link,
+  .listNav .headerItem a:visited {
+    font-size: 20px;
+    color: rgb(172, 102, 24);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgba(30, 32, 47, 0.582);
+  }
+  .listNav .headerItem a {
+    font-size: 20px;
+  }
+}
 /*Termina nav*/
 /*dropdown*/
 .botonMenu {
@@ -158,7 +170,8 @@ body {
 .contenedor-texto .img-index3 {
   float: right;
 }
-.contenedor-texto .img-index-mobile {
+
+.img-index-mobile {
   display: none;
 }
 
@@ -166,15 +179,15 @@ body {
   .img-index1, .img-index2, .img-index3 {
     display: none;
   }
-  .texto-bienvenida {
-    font-size: 20px;
+  .contenedor-texto .texto-bienvenida {
+    font-size: 16px;
     bottom: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
-  .img-index-mobile {
+  .contenedor-texto .texto-bienvenida .img-index-mobile {
     display: block;
     width: 90%;
   }

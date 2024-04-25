@@ -37,8 +37,21 @@
   }
 }
 @media screen and (max-width: 326px){
+.listNav{
+  .headerItem{
+    a:link,
+    a:visited {
+      font-size: 20px;
+      color: $color-claro;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: $color-oscuro;
+    }
+    a {
+      font-size: 20px;
+    }
   }
-
+}
+}
 /*Termina nav*/
 
 /*dropdown*/
