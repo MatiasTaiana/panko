@@ -9,6 +9,8 @@
 
 body {
   background-image: url(./img/fondo.jpg);
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 /*nav*/
